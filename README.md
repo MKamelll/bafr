@@ -2,10 +2,10 @@
 
 To run a module ```./bafr.py <module_name>```
 
-Available Moules:
+Available Modules:
 - volume
 - weather
-- data
+- date
 - load (i.e. system load)
 - memory
 - keyboard_layout
