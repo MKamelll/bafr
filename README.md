@@ -10,4 +10,4 @@ Available Modules:
 - memory
 - keyboard_layout
 
-In case you prefer something in bash, [I have the samething in bash](https://github.com/MKamelll/dotfiles/tree/main/i3blocks/i3bs), I'm that boring.
+In case you prefer something in bash, [I have the same thing in bash](https://github.com/MKamelll/dotfiles/tree/main/i3blocks/i3bs), I'm that boring.
