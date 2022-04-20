@@ -6,6 +6,7 @@ from weather import weather
 from load import load
 from memory import memory
 from keyboard_layout import keyboard_layout
+from network import network
 from cli import cli
 
 import sys
@@ -15,7 +16,8 @@ available_modules = {   "date"   : date,
                         "weather": weather,
                         "load"   : load,
                         "memory" : memory,
-                        "keyboard_layout": keyboard_layout
+                        "keyboard_layout": keyboard_layout,
+                        "network": network
                     }
     
 def assert_available(module):
