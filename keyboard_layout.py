@@ -1,9 +1,26 @@
 from Bafr import Bafr
+from Grid import Grid
+import os
 
 def layout_parser(raw):
-    return [i for i in raw.split("\n") if len(i) > 0][2].split(" ")[-1]
+    g = Grid(raw)
+    for i in g:
+        if i[0] == "layout:":
+            return i[1]
 
-def keyboard_layout(params=None):
+def set_layout(layout):
+    cmd = "setxkbmap"
+    flags = [layout]
+
+    bafr = Bafr("set_layout")
+    bafr.set_cmd(cmd)
+    bafr.set_cmd_flags(flags)
+
+    if not bafr.run():
+        bafr.eecho(end="\n")
+        bafr.exit()
+
+def query():
     cmd = "setxkbmap"
     flags = ["-query"]
 
@@ -15,5 +32,14 @@ def keyboard_layout(params=None):
     if not bafr.run():
         bafr.eecho(end="\n")
         bafr.exit()
-
+    
     bafr.echo(end="\n")
+
+def keyboard_layout(params=None):
+    button = os.getenv("button")
+    if button == "1":
+        set_layout("us")
+    elif button == "3":
+        set_layout("ara")
+
+    query()
