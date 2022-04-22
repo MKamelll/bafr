@@ -8,6 +8,7 @@ from memory import memory
 from keyboard_layout import keyboard_layout
 from network import network
 from brightness import brightness
+from updates import updates
 from cli import cli
 
 import sys
@@ -19,7 +20,8 @@ available_modules = {   "date"   : date,
                         "memory" : memory,
                         "keyboard_layout": keyboard_layout,
                         "network": network,
-                        "brightness": brightness
+                        "brightness": brightness,
+                        "updates": updates
                     }
     
 def assert_available(module):
