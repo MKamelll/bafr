@@ -11,6 +11,9 @@ class Grid:
     def __str__(self):
         return f"{self.lines}"
 
+    def __len__(self):
+        return len(self.lines)
+
 
 
 
