@@ -42,6 +42,7 @@ class Bafr:
         if not mod_name:
             mod_name = "bafr"
         self.mod_name = mod_name
+        self.mod_params = {}
         self.cmd = None
         self.flags = []
         self.parser = None
@@ -126,4 +127,10 @@ class Bafr:
             return False
         
         return True
+    
+    def set_params(params):
+        self.mod_params = params
 
+    def get_param(param_key):
+        if param_key in self.mod_params:
+            return self.mod_params[param_key]
