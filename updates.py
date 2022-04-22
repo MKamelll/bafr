@@ -3,10 +3,7 @@ from Grid import Grid
 
 def updates_parser(raw):
     g = Grid(raw)
-    for i in g:
-        if not "Nothing" in i:
-            return len(g)
-    return ""
+    return len(g) if len(g) > 0 else ""
 
 def updates(params=None):
     if not params: params = []
